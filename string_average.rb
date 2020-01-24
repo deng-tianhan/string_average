@@ -1,5 +1,4 @@
 ZERO_TO_NINE = %w(zero one two three four five six seven eight nine)
-NUMBERS_MAP = ZERO_TO_NINE.map.with_index.to_h
 
 def string_average(string_of_numbers)
 	numbers = string_of_numbers.split(' ')
@@ -16,10 +15,10 @@ end
 
 private
 
-def num_to_int(key)
-	NUMBERS_MAP[key]
+def num_to_int(num)
+	ZERO_TO_NINE.index(num)
 end
 
-def int_to_num(value)
-	NUMBERS_MAP.key(value)
+def int_to_num(int)
+	ZERO_TO_NINE[int]
 end
